@@ -3,7 +3,7 @@ import useTeamNames from '../hooks/useTeamNames'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
-    const {loading,  response: teamNames} = useTeamNames()
+    const {loading,  response: teamNames} = useTeamNames();
     
     
     if (loading) return null
