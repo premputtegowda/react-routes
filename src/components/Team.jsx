@@ -4,6 +4,7 @@ import {
   } from 'react-router-dom'
   import useTeam from '../hooks/useTeam'
   import TeamLogo from './TeamLogo'
+  import Loading from './Loading'
   
   export default function Team () {
     const { teamId } = useParams()
@@ -13,7 +14,7 @@ import {
     } = useTeam(teamId)
   
     if (loading === true){
-      return null
+      return <Loading />
     }
   
     return (

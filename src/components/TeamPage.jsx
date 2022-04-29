@@ -5,6 +5,7 @@ import useTeamNames from '../hooks/useTeamNames'
 import useTeamsArticles from '../hooks/useTeamsArticles'
 import useTeam from '../hooks/useTeam'
 import { slugify } from '../utils'
+import Loading from './Loading'
 
 function useTeamPageData (teamId) {
     const {
@@ -42,7 +43,7 @@ export default function TeamPage() {
     const {teamNames, articles, team, loading} = useTeamPageData(teamId)
 
     if (loading === true) {
-        return <p>LOADING</p>
+        return <Loading />
     }
     console.log("team", team)
     console.log("team", team.name)
